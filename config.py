@@ -97,9 +97,9 @@ keys = [
         desc='Keyboard focus to monitor 2'
         ),
 
-    Key([mod, 'control'], 'a', lazy.spawn('gnome-screensaver-command -l')),
-    Key([mod, 'control'], 'z', lazy.spawn('gnome-session-quit --logout --no-prompt')),
-    Key([mod, 'shift', 'control'], 'z', lazy.spawn('gnome-session-quit --power-off')),
+    # Key([mod, 'control'], 'a', lazy.spawn('gnome-screensaver-command -l')),
+    # Key([mod, 'control'], 'z', lazy.spawn('gnome-session-quit --logout --no-prompt')),
+    # Key([mod, 'shift', 'control'], 'z', lazy.spawn('gnome-session-quit --power-off')),
 
 ]
 
@@ -169,7 +169,7 @@ screens = [
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
                 widget.QuickExit(),
             ],
-            background=["#35f0f9", "#0c22de"],
+            # background=["#35f0f9", "#0c22de"],
             24,
         ),
     ),

@@ -64,9 +64,14 @@ keys = [
     Key([mod], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
 
+##############################################
+################ SETTINGS ####################
+##############################################
+
     KeyChord([mod], "q", [
         Key([], "s", lazy.spawn(myTerm + " -e systemctl suspend")),
         Key([], "o", lazy.spawn(myTerm + " -e systemctl poweroff")),
+        Key([], "b", lazy.spawn(myTerm + " -e sudo chmod 666 /sys/class/backlight/intel_backlight/brightness")),
     ]),
 
     # ------------ qtile ---------------
@@ -132,6 +137,8 @@ keys = [
     # Brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+    Key([mod], "F3", lazy.spawn("brightnessctl set +5%")),
+    Key([mod], "F2", lazy.spawn("brightnessctl set 5%-")),
 ##############################################
 ############## SCREENSHOTS ###################
 ##############################################
